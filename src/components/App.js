@@ -24,31 +24,44 @@ class App extends Component {
 
     };
   }
-  
-   render() {
+
+  render() {
     const { auth } = this.state;
     return (
-     <AuthContext.Provider value={auth}>
-    <div className="dashboard-header ">
-      <Header auth={auth} />
-      <Switch>
-        <Route exact path="/home" auth={auth} component={HomePage} />
-        <Route path="/callback"
-          render={props => <Callback auth={auth} {...props} />}/>
-        <Route exact auth={auth} path="/" component={AboutPage} />
-        <Route exact auth={auth} path="/groups" component={GroupsPage} />
-        <Route exact auth={auth} path="/group/:id" component={ManageGroupPage} />
-        <Route exact auth={auth} path="/group" component={ManageGroupPage} />
-        <Route exact auth={auth} path="/cards" component={CardPage} />
-        <Route exact auth={auth} path="/card/:id" component={ManageCardPage} />
-        <Route exact auth={auth} path="/card" component={ManageCardPage} />
-        <Route exact auth={auth} path="/cardview/:id" component={CardView} />
-        <Route exact auth={auth} component={PageNotFound} />
-      </Switch>
-      <ToastContainer autoClose={3000} hideProgressBar />
-    </div>
-   </AuthContext.Provider>
-  );
+      <AuthContext.Provider value={auth}>
+        <div className="dashboard-header ">
+          <Header auth={auth} />
+          <Switch>
+            <Route exact path="/home" auth={auth} component={HomePage} />
+            <Route path="/callback"
+              render={props => <Callback auth={auth} {...props} />} />
+            <Route exact auth={auth} path="/" component={AboutPage} />
+            <Route exact auth={auth} path="/about" component={AboutPage} />
+            <Route exact auth={auth} path="/groups" component={GroupsPage} />
+            <Route exact auth={auth} path="/group/:id" component={ManageGroupPage} />
+            <Route exact auth={auth} path="/group" component={ManageGroupPage} />
+            <Route exact auth={auth} path="/cards" component={CardPage} />
+            <Route exact auth={auth} path="/card/:id" component={ManageCardPage} />
+            <Route exact auth={auth} path="/card" component={ManageCardPage} />
+            <Route exact auth={auth} path="/cardview/:id" component={CardView} />
+            <Route exact auth={auth} component={PageNotFound} />
+          </Switch>
+          <div className="footer">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  Copyright © 2020 <a href="http://codewithamit.com">Codewithamit.com</a>
+                        </div>
+                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <ToastContainer autoClose={3000} hideProgressBar />
+        </div>
+      </AuthContext.Provider>
+    );
   }
 }
 

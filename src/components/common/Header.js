@@ -9,7 +9,7 @@ export default class Header extends Component {
         return (
             <nav className="navbar navbar-expand-lg bg-white fixed-top">
                 <Link to="/home" className="navbar-brand" >Bhagavad Gita</Link>
-                <img className="img-fluid" src={LogoImg} alt="card-img" height={20} width={40}/>
+                <img className="img-fluid" src={LogoImg} alt="card-img" height={20} width={40} />
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -31,14 +31,11 @@ export default class Header extends Component {
                             </li>
                         )}
                         <li className="nav-item">
-                            <Link to="/" className="nav-link" activestyle={activeStyle}>About</Link>
+                            <Link to="/about" className="nav-link" activestyle={activeStyle}>About</Link>
                         </li>
                         <li className="nav-item">
-                            <button className="nav-link" onClick={isAuthenticated() ? logout : login}>
-                                {isAuthenticated() ? "Log Out" : "Log In"}
-                            </button>
+                            <Link onClick={isAuthenticated() ? logout : login} className="nav-link" activestyle={activeStyle}>  {isAuthenticated() ? "Log Out" : "Log In"}</Link>
                         </li>
-
                     </ul>
                 </div>
             </nav>
