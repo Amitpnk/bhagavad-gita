@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
+import Footer from "./common/Footer";
 import PageNotFound from "./PageNotFound";
 import ManageCardPage from './cards/ManageCardPage';
 import CardPage from "./cards/CardPage";
@@ -46,18 +47,7 @@ class App extends Component {
             <Route exact auth={auth} path="/cardview/:id" component={CardView} />
             <Route exact auth={auth} component={PageNotFound} />
           </Switch>
-          <div className="footer">
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                  Copyright © 2020 <a href="http://codewithamit.com">Codewithamit.com</a>
-                        </div>
-                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-
-                </div>
-              </div>
-            </div>
-          </div>
+          <Footer />
           <ToastContainer autoClose={3000} hideProgressBar />
         </div>
       </AuthContext.Provider>

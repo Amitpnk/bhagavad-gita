@@ -47,70 +47,89 @@ const GroupForm = ({
         // });
     }
     return (
-        <form onSubmit={onSave} className="padding-align-pages">
+        <form className="dashboard-wrapper" onSubmit={onSave}  >
+            <div className="container-fluid dashboard-content">
+                <div className="row">
+                    <div className="col-xl-12">
 
-            <h2>{group.id ? "Edit" : "Add"} Group</h2>
-            {errors.onSave && (
-                <div className="alert alert-danger" role="alert">
-                    {errors.onSave}
-                </div>
-            )}
+                        <div className="row">
+                            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div className="page-header" id="top">
+                                    <h2 className="pageheader-title">&nbsp; </h2>
+                                </div>
+                            </div>
+                        </div>
 
-            <div className="form-row">
-                <div className="form-group col-md-4">
-                    <TextInput
-                        name="name"
-                        label="Name"
-                        value={group.name}
-                        onChange={onChange}
-                        error={errors.name}
-                    />
+                        <div className="row">
+                            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div className="page-header" id="top">
+                                    <h2 className="pageheader-title">{group.id ? "Edit" : "Add"} Group</h2>
+                                </div>
+                            </div>
+                        </div>
 
-                </div>
-                <div className="form-group col-md-4">
-                    <TextInput
-                        name="description"
-                        label="Description"
-                        value={group.description}
-                        onChange={onChange}
-                        error={errors.description}
-                    />
-                </div>
-                <div className="form-group col-md-4">
-                    <label htmlFor="iconSelect" className="col-form-label text-nowrap"
-                        style={{ paddingTop: 0 }}
-                    >Map card</label>
-                    <Multiselect id="iconSelect"
-                        options={cards} // Options to display in the dropdown
-                        selectedValues={group.cardSelected} // Preselected value to persist in dropdown
-                        onSelect={onSelect} // Function will trigger on select event
-                        // onRemove={onRemove} // Function will trigger on remove event
-                        displayValue="name" // Property name to display in the dropdown options
-                        showCheckbox={true}
-                        closeIcon="close"
-                        closeOnSelect={false}
-                    />
-                </div>
-            </div>
-            <div className="form-row">
-                <div className="form-group col-md-4">
-                    <input type="checkbox"
-                        name="isActive"
-                        value={group.isActive}
-                        id="isActive"
-                        checked={true}
-                        onChange={handleInputChange}
-                    />
-                    <label className="form-check-label" htmlFor="isActive">
-                        &nbsp;&nbsp;Active
+
+                        {errors.onSave && (
+                            <div className="alert alert-danger" role="alert">
+                                {errors.onSave}
+                            </div>
+                        )}
+
+                        <div className="form-row">
+                            <div className="form-group col-md-4">
+                                <TextInput
+                                    name="name"
+                                    label="Name"
+                                    value={group.name}
+                                    onChange={onChange}
+                                    error={errors.name}
+                                />
+
+                            </div>
+                            <div className="form-group col-md-4">
+                                <TextInput
+                                    name="description"
+                                    label="Description"
+                                    value={group.description}
+                                    onChange={onChange}
+                                    error={errors.description}
+                                />
+                            </div>
+                            <div className="form-group col-md-4">
+                                <label htmlFor="iconSelect" className="col-form-label text-nowrap"
+                                    style={{ paddingTop: 0 }}
+                                >Map card</label>
+                                <Multiselect id="iconSelect"
+                                    options={cards} // Options to display in the dropdown
+                                    selectedValues={group.cardSelected} // Preselected value to persist in dropdown
+                                    onSelect={onSelect} // Function will trigger on select event
+                                    // onRemove={onRemove} // Function will trigger on remove event
+                                    displayValue="name" // Property name to display in the dropdown options
+                                    showCheckbox={true}
+                                    closeIcon="close"
+                                    closeOnSelect={false}
+                                />
+                            </div>
+                        </div>
+                        <div className="form-row">
+                            <div className="form-group col-md-4">
+                                <input type="checkbox"
+                                    name="isActive"
+                                    value={group.isActive}
+                                    id="isActive"
+                                    checked={true}
+                                    onChange={handleInputChange}
+                                />
+                                <label className="form-check-label" htmlFor="isActive">
+                                    &nbsp;&nbsp;Active
                     </label>
 
-                </div>
-            </div>
-            <button type="submit" disabled={saving} className="btn btn-primary">
-                {saving ? "Saving..." : "Save"}
-            </button>
-        </form>
+                            </div>
+                        </div>
+                        <button type="submit" disabled={saving} className="btn btn-primary">
+                            {saving ? "Saving..." : "Save"}
+                        </button>
+                    </div> </div> </div>  </form >
     );
 };
 

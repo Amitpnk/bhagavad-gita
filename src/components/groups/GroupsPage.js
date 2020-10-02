@@ -38,19 +38,40 @@ class GroupsPage extends Component {
 
     render() {
         return (
-            <div className="padding-align-pages">
-                {this.state.redirectToAddGroupPage && <Redirect to="/group"></Redirect>}
-                <h2>Groups</h2>
-                {this.props.loading ?
-                    <Spinner /> : (
-                        <> <button
-                            style={{ marginBottom: 20 }}
-                            className="btn btn-primary add-group"
-                            onClick={() => this.setState({ redirectToAddGroupPage: true })}>Add Group</button>
+            <div className="dashboard-wrapper">
+                <div className="container-fluid dashboard-content">
+                    <div className="row">
+                        <div className="col-xl-12">
+                            <div className="row">
+                                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div className="page-header" id="top">
+                                        <h2 className="pageheader-title">&nbsp; </h2>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <GroupList onDeleteClick={this.handleDeleteGroup} groups={this.props.groups} />
-                        </>)
-                }
+                            <div className="row">
+                                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div className="page-header" id="top">
+                                        <h2 className="pageheader-title">Groups </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            {this.state.redirectToAddGroupPage && <Redirect to="/group"></Redirect>}
+                           
+                            {this.props.loading ?
+                                <Spinner /> : (
+                                    <> <button
+                                        style={{ marginBottom: 20 }}
+                                        className="btn btn-primary add-group"
+                                        onClick={() => this.setState({ redirectToAddGroupPage: true })}>Add Group</button>
+
+                                        <GroupList onDeleteClick={this.handleDeleteGroup} groups={this.props.groups} />
+                                    </>)
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

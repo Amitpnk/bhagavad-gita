@@ -28,7 +28,7 @@ const CharacterItem = ({ item }) => {
                 <ul className="list-inline d-flex text-muted mb-0">
 
                     <li className="list-inline-item text-truncate mr-auto">
-                        <a href={CardImg} download> <span className="badge badge-info">v4.1</span></a>
+                        <a href={CardImg} download> <span className="badge badge-info">BG 4.1</span></a>
                     </li>
                     <li className="list-inline-item ">
                         <a href="#"> <span><i

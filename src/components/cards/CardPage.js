@@ -34,19 +34,44 @@ class CardPage extends Component {
 
     render() {
         return (
-            <div className="padding-align-pages">
-                {this.state.redirectToAddCardPage && <Redirect to="/card"></Redirect>}
-                <h2>Cards</h2>
-                {this.props.loading ?
-                    <Spinner /> : (
-                        <> <button
-                            style={{ marginBottom: 20 }}
-                            className="btn btn-primary add-card"
-                            onClick={() => this.setState({ redirectToAddCardPage: true })}
-                        >Add Card</button>
-                            <CardList onDeleteClick={this.handleDeleteCard} cards={this.props.cards} />
-                        </>)
-                }
+
+            <div className="dashboard-wrapper">
+                <div className="container-fluid dashboard-content">
+                    <div className="row">
+                        <div className="col-xl-12">
+
+
+                            <div className="row">
+                                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div className="page-header" id="top">
+                                        <h2 className="pageheader-title">&nbsp; </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div className="page-header" id="top">
+                                        <h2 className="pageheader-title">Cards </h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {this.state.redirectToAddCardPage && <Redirect to="/card"></Redirect>}
+
+                            {this.props.loading ?
+                                <Spinner /> : (
+                                    <> <button
+                                        style={{ marginBottom: 20 }}
+                                        className="btn btn-primary"
+                                        onClick={() => this.setState({ redirectToAddCardPage: true })}
+                                    >Add Card</button>
+                                        <CardList onDeleteClick={this.handleDeleteCard} cards={this.props.cards} />
+                                    </>)
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
