@@ -16,7 +16,7 @@ class GroupsPage extends Component {
     };
 
     componentDidMount() {
-        const { groups, cards, actions } = this.props;
+        const { groups, actions } = this.props;
 
         if (groups.length === 0) {
             actions.loadGroups().catch(error => {
@@ -58,7 +58,7 @@ class GroupsPage extends Component {
                                 </div>
                             </div>
                             {this.state.redirectToAddGroupPage && <Redirect to="/group"></Redirect>}
-                           
+
                             {this.props.loading ?
                                 <Spinner /> : (
                                     <> <button

@@ -4,6 +4,7 @@ import Spinner from '../Spinner'
 
 const CharacterGrid = ({ items, isLoading }) => {
   return isLoading ? (
+
     <Spinner />
   ) : (
       <>
