@@ -6,6 +6,7 @@ import SelectInput from "../common/SelectInput";
 const HomePage = () => {
 
     const [items, setItems] = useState([])
+    const [fullListItems, setFullListItems] = useState([])
     const [groups, setGroups] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [query, setQuery] = useState('')
@@ -17,7 +18,7 @@ const HomePage = () => {
                 `${process.env.REACT_APP_API_URL}/cards`
             )
             setItems(result.data)
-
+            setFullListItems(result.data)
             const resultGroup = await axios(
                 `${process.env.REACT_APP_API_URL}/groups`
             )
@@ -32,17 +33,24 @@ const HomePage = () => {
         console.log(name);
         console.log(value);
 
+        // setItems(fullListItems);
         const g = groups.filter(g => g.id === +value).map(x => x.cards);
 
-        const itemFilter = items.filter((x) => g[0].includes(x.id))
+        // const itemFilter = items.filter((x) => g[0].includes(x.id))
 
-        // setItems(
-        //     items.filter((x) => g[0].includes(x.id))
-        // );
-        setItems(prevCard => ({
-            ...prevCard,
-            [items]: items.filter((x) => g[0].includes(x.id))
-        }));
+        value ?
+            setItems(
+                fullListItems.filter((x) => g[0].includes(x.id))
+            ) : setItems(
+                fullListItems
+            );
+
+        // this.setState(prevState => ({ counter: prevState.counter + 1 }));
+
+        // setItems(prevCard => ({
+        //     ...prevCard,
+        //     [items]: itemFilter
+        // }));
         console.log(items);
     }
 
