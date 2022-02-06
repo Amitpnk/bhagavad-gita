@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bhagavad-gita/precache-manifest.d6645b4100962aa9fa5f48e45bd6d6a9.js"
+  "/bhagavad-gita/precache-manifest.67de358c088ffdb298dac401a2011ff4.js"
 );
 
 self.addEventListener('message', (event) => {
