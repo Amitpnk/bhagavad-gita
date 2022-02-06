@@ -5,7 +5,7 @@ import LogoImg from "../../img/logo3.png";
 export default class Header extends Component {
     render() {
         const activeStyle = { color: "#F15B2A" };
-        const { isAuthenticated, login, logout, userHasScopes } = this.props.auth;
+        // const { login, logout, userHasScopes } = this.props.auth;
         return (
             <nav className="navbar navbar-expand-lg bg-white fixed-top">
                 <Link to="/home" className="navbar-brand" >Bhagavad Gita</Link>
@@ -20,18 +20,18 @@ export default class Header extends Component {
                         <li className="nav-item">
                             <Link to="/home" className="nav-link" activestyle={activeStyle}>Home</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link to="/cards" className="nav-link" activestyle={activeStyle}>Cards</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/groups" className="nav-link" activestyle={activeStyle}>Groups</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link to="/about" className="nav-link" activestyle={activeStyle}>About</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link onClick={isAuthenticated() ? logout : login} className="nav-link" activestyle={activeStyle}>  {isAuthenticated() ? "Log Out" : "Log In"}</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </nav>

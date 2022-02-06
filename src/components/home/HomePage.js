@@ -12,20 +12,28 @@ const HomePage = () => {
     const [query, setQuery] = useState('')
 
     useEffect(() => {
-        const fetchItems = async () => {
+        // const fetchItems = async () => {
+        {
             setIsLoading(true)
-            const result = await axios(
-                `${process.env.REACT_APP_API_URL}/cards`
-            )
-            setItems(result.data)
-            setFullListItems(result.data)
-            const resultGroup = await axios(
-                `${process.env.REACT_APP_API_URL}/groups`
-            )
-            setGroups(resultGroup.data)
+            // const result = await axios(
+            //     `./db.json`
+            // )
+
+            fetch('data/db.json')
+                .then((r) => r.json())
+                .then((data) => {
+                    console.log(data);
+                    setItems(data.cards)
+                    setFullListItems(data.cards)
+                    setGroups(data.groups)
+                })
+
+
+
+
             setIsLoading(false)
         }
-        fetchItems()
+        // fetchItems()
     }, [])
 
     function handleChange(event) {

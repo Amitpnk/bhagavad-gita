@@ -26,15 +26,15 @@ class AboutPage extends Component {
                             </div>
 
 
-                            <div className="row">
+                            {/* <div className="row">
                                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <h3  >Application is created mainly to help you based on problem you are looking for, choose your problem based on it related slokas will be displayed on screen</h3>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="row">
                                 <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <h3 >Any suggestion or improvement please drop mail amit.naik8103@gmail.com</h3>
+                                    <h3 >Any suggestion or improvement please drop mail <a href="mailto:amit.naik8103@gmail.com">amit.naik8103@gmail.com</a></h3>
                                 </div>
                             </div>
                         </div>
