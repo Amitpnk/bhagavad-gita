@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bhagavad-gita/static/css/main.762299d0.chunk.css",
-    "main.js": "/bhagavad-gita/static/js/main.ab522a5a.chunk.js",
-    "main.js.map": "/bhagavad-gita/static/js/main.ab522a5a.chunk.js.map",
+    "main.js": "/bhagavad-gita/static/js/main.24568e06.chunk.js",
+    "main.js.map": "/bhagavad-gita/static/js/main.24568e06.chunk.js.map",
     "runtime-main.js": "/bhagavad-gita/static/js/runtime-main.5ee345e4.js",
     "runtime-main.js.map": "/bhagavad-gita/static/js/runtime-main.5ee345e4.js.map",
     "static/css/2.8280a61e.chunk.css": "/bhagavad-gita/static/css/2.8280a61e.chunk.css",
     "static/js/2.9e17d592.chunk.js": "/bhagavad-gita/static/js/2.9e17d592.chunk.js",
     "static/js/2.9e17d592.chunk.js.map": "/bhagavad-gita/static/js/2.9e17d592.chunk.js.map",
     "index.html": "/bhagavad-gita/index.html",
-    "precache-manifest.e5cea6f0c2594dd1ba0f02e3da71856c.js": "/bhagavad-gita/precache-manifest.e5cea6f0c2594dd1ba0f02e3da71856c.js",
+    "precache-manifest.fb799c08559c998665585fc592bcd062.js": "/bhagavad-gita/precache-manifest.fb799c08559c998665585fc592bcd062.js",
     "service-worker.js": "/bhagavad-gita/service-worker.js",
     "static/css/2.8280a61e.chunk.css.map": "/bhagavad-gita/static/css/2.8280a61e.chunk.css.map",
     "static/css/main.762299d0.chunk.css.map": "/bhagavad-gita/static/css/main.762299d0.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.8280a61e.chunk.css",
     "static/js/2.9e17d592.chunk.js",
     "static/css/main.762299d0.chunk.css",
-    "static/js/main.ab522a5a.chunk.js"
+    "static/js/main.24568e06.chunk.js"
   ]
 }
