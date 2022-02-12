@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9470af97f1abd9a9773cd7f0a681f6aa",
+    "revision": "865000bb06b7546bde7c88776653f6bc",
     "url": "/bhagavad-gita/index.html"
   },
   {
