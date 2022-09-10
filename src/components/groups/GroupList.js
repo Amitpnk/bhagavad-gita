@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const GroupList = ({ groups, onDeleteClick }) => (
 
-	<div class="card">
+	<div className="card">
 		< table className="table table-hover" >
 			<thead>
 				<tr>
