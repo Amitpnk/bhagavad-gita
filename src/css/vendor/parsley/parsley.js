@@ -867,7 +867,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       // UI could be disabled
       if (false === this.options.uiEnabled) return;
 
-      this.element.setAttribute('novalidate', '');
+      this.element.setAttribute('noValidate', '');
     },
 
     focus: function focus() {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useParams } from "react-router-dom";
+import data from "../bg-data.json";
 
 const CardView = () => {
 
@@ -10,15 +11,17 @@ const CardView = () => {
 
 
     useEffect(() => {
-        const fetchItems = async () => {
-            setIsLoading(true)
-            const result = await axios(
-                `${process.env.REACT_APP_API_URL}/cards/${id}`
-            )
-            setItems(result.data)
-            setIsLoading(false)
-        }
-        fetchItems()
+        setItems(data.cards)
+
+        // fetch('data/db.json')
+        // .then((r) => r.json())
+        // .then((data) => {
+        //     console.log(data);
+        //     debugger;
+        //     // data.cards.filter(x=>x.verse ==="3")
+        //     setItems(data.cards)
+
+        // })
     }, [])
 
 
