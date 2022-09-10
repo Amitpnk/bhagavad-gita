@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import CharacterGrid from "../common/characters/CharacterGrid";
 import axios from 'axios'
 import SelectInput from "../common/SelectInput";
-import data from "../bg-data.json";
+
 const HomePage = () => {
 
     const [items, setItems] = useState([])
@@ -15,20 +15,36 @@ const HomePage = () => {
         // const fetchItems = async () => {
         {
             setIsLoading(true)
+            // const result = await axios(
+            //     `./db.json`
+            // )
 
-            setItems(data.cards)
-            setFullListItems(data.cards)
-            setGroups(data.groups)
+            fetch('data/db.json')
+                .then((r) => r.json())
+                .then((data) => {
+                    console.log(data);
+                    setItems(data.cards)
+                    setFullListItems(data.cards)
+                    setGroups(data.groups)
+                })
+
+
+
 
             setIsLoading(false)
         }
-
-
+        // fetchItems()
     }, [])
 
     function handleChange(event) {
         const { name, value } = event.target;
+        console.log(name);
+        console.log(value);
+
+        // setItems(fullListItems);
         const g = groups.filter(g => g.id === +value).map(x => x.cards);
+
+        // const itemFilter = items.filter((x) => g[0].includes(x.id))
 
         value ?
             setItems(
@@ -37,27 +53,13 @@ const HomePage = () => {
                 fullListItems
             );
 
-        // setItems(prevCard => ({
-        //     ...prevCard,
-        //     [items]: itemFilter
-        // }));
-    }
-
-    function handleChange2(event) {
-        debugger;
-        const { name, value } = event.target;
-
-        value ?
-            setItems(
-                fullListItems.filter((x) => value)
-            ) : setItems(
-                fullListItems
-            );
+        // this.setState(prevState => ({ counter: prevState.counter + 1 }));
 
         // setItems(prevCard => ({
         //     ...prevCard,
         //     [items]: itemFilter
         // }));
+        console.log(items);
     }
 
     return (
@@ -72,13 +74,13 @@ const HomePage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <form className="needs-validation" noValidate>
-                                            <div className="row">
-                                                <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                                     <SelectInput
                                                         name="solutionId"
                                                         label="Solution"
@@ -93,22 +95,21 @@ const HomePage = () => {
                                                     />
 
                                                 </div>
-                                                <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+                                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                                     <label for="validationCustom02">Search</label>
-                                                    {/* <input type="text" className="form-control" id="validationCustom02" placeholder="Search verses | sloka | keyword" /> */}
+                                                    {/* <input type="text" class="form-control" id="validationCustom02" placeholder="Search verses | sloka | keyword" /> */}
 
 
                                                     <input
                                                         type="text"
                                                         className="form-control "
                                                         placeholder="Search verses | sloka | keyword"
-                                                        // onChange={handleChange2}
                                                         onChange={e => setQuery(e.target.value)}
                                                         value={query}
                                                     />
 
 
-                                                    {/* <div className="valid-feedback">
+                                                    {/* <div class="valid-feedback">
                                                         Looks good!
                                                     </div> */}
                                                 </div>
@@ -122,16 +123,16 @@ const HomePage = () => {
                         <div className="row">
                             <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
                                 <div className="page-header" id="top">
-                                    <div className="pills-regular">
-                                        <ul className="nav nav-pills mb-1" id="pills-tab" role="tablist">
-                                            <li className="nav-item">
-                                                <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
+                                    <div class="pills-regular">
+                                        <ul class="nav nav-pills mb-1" id="pills-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
                                             </li>
-                                            <li className="nav-item">
-                                                <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#memorization" role="tab" aria-controls="memorization" aria-selected="false">For memorization <span className="badge badge-primary badge-pill">101</span></a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#memorization" role="tab" aria-controls="memorization" aria-selected="false">For memorization <span class="badge badge-primary badge-pill">101</span></a>
                                             </li>
-                                            <li className="nav-item">
-                                                <a className="nav-link" id="pills-contact-tab" data-toggle="pill" href="#favorite" role="tab" aria-controls="favorite" aria-selected="false">My favorite <span className="badge badge-primary badge-pill">0</span></a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#favorite" role="tab" aria-controls="favorite" aria-selected="false">My favorite <span class="badge badge-primary badge-pill">0</span></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -141,16 +142,17 @@ const HomePage = () => {
 
                         <div className="row">
                             <CharacterGrid isLoading={isLoading}
-                                items={items.filter(v => {
-                                    if (v.name.toLowerCase().indexOf(query) >= 0
-                                        || v.description.toLowerCase().indexOf(query) >= 0
-                                        || v.meaning.toLowerCase().indexOf(query) >= 0
-                                        || v.code.toLowerCase().indexOf(query) >= 0
-                                    ) {
-                                        return true;
-                                    }
-                                    return false;
-                                })}
+                                // items={items.filter(v => {
+                                //     if (v.name.toLowerCase().indexOf(query) >= 0
+                                //         || v.description.toLowerCase().indexOf(query) >= 0
+                                //         || v.meaning.toLowerCase().indexOf(query) >= 0
+                                //         || v.code.toLowerCase().indexOf(query) >= 0
+                                //     ) {
+                                //         return true;
+                                //     }
+                                //     return false;
+                                // })}
+                                items={items}
 
                             />
                         </div>

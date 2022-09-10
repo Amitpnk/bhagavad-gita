@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
@@ -32,22 +32,21 @@ class App extends Component {
 
       <div className="dashboard-header ">
         <Header />
-        <Router basename={process.env.PUBLIC_URL}>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            {/* <Route exact path="/home" component={HomePage} /> */}
-            <Route path="/callback" render={props => <Callback   {...props} />} />
-            <Route exact path="/about" component={AboutPage} />
-            <Route exact path="/groups" component={GroupsPage} />
-            <Route exact path="/group/:id" component={ManageGroupPage} />
-            <Route exact path="/group" component={ManageGroupPage} />
-            <Route exact path="/cards" component={CardPage} />
-            <Route exact path="/card/:id" component={ManageCardPage} />
-            <Route exact path="/card" component={ManageCardPage} />
-            <Route exact path="/cardview/:id" component={CardView} />
-            <Route exact component={PageNotFound} />
-          </Switch>
-        </Router>
+        <Switch>
+          <Route exact path="/home" component={HomePage} />
+          <Route path="/callback"
+            render={props => <Callback   {...props} />} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/groups" component={GroupsPage} />
+          <Route exact path="/group/:id" component={ManageGroupPage} />
+          <Route exact path="/group" component={ManageGroupPage} />
+          <Route exact path="/cards" component={CardPage} />
+          <Route exact path="/card/:id" component={ManageCardPage} />
+          <Route exact path="/card" component={ManageCardPage} />
+          <Route exact path="/cardview/:id" component={CardView} />
+          <Route exact component={PageNotFound} />
+        </Switch>
         <Footer />
         <ToastContainer autoClose={3000} hideProgressBar />
       </div>
