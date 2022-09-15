@@ -28,6 +28,176 @@
                 1,
                 3
             ]
+        },
+        {
+            "name": "Demotivated",
+            "description": "Demotivated",
+            "isActive": true,
+            "id": 4,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Discriminated",
+            "description": "Discriminated",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Depressed",
+            "description": "Depressed",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Fear",
+            "description": "Fear",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Feeling sinful",
+            "description": "Feeling sinful",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Forgetfulness",
+            "description": "Forgetfulness",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Greed",
+            "description": "Greed",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Laziness",
+            "description": "Laziness",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Loneliness",
+            "description": "Loneliness",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Losing hope",
+            "description": "Losing hope",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Lust",
+            "description": "Lust",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Practicing forgiveness",
+            "description": "Practicing forgiveness",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Pride",
+            "description": "Pride",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Seeking peace",
+            "description": "Seeking peace",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Temptation",
+            "description": "Temptation",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Uncontrolled mind",
+            "description": "Uncontrolled mind",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
+        },
+        {
+            "name": "Death of loved one",
+            "description": "Death of loved one",
+            "isActive": true,
+            "id": 3,
+            "cards": [
+                1,
+                3
+            ]
         }
     ],
     "cards": [
