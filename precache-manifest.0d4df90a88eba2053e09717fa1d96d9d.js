@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "899b1f43c1a5b8f8ced9e7ba22b16ede",
+    "revision": "2e9da4e0a47fef93a24d46fbc2ae78a9",
     "url": "/bhagavad-gita/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bhagavad-gita/static/css/2.a31c0c64.chunk.css"
   },
   {
-    "revision": "d69cd513a5b5c1f3fc78",
+    "revision": "30258fb45860799abc3a",
     "url": "/bhagavad-gita/static/css/main.e341eb09.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bhagavad-gita/static/js/2.474f0a8e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d69cd513a5b5c1f3fc78",
-    "url": "/bhagavad-gita/static/js/main.50c43080.chunk.js"
+    "revision": "30258fb45860799abc3a",
+    "url": "/bhagavad-gita/static/js/main.fe8e9537.chunk.js"
   },
   {
     "revision": "a0e34d90c2b86a102cf9",
