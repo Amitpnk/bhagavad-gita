@@ -14,7 +14,9 @@ const CharacterItem = ({ item }) => {
                         <div className="figure-description">
                             <h6 className="figure-title"> {item.name} </h6>
                             <p className="text-muted mb-0">
-                                <small>{item.description}
+                                <small> {item.description}
+                                </small> <br/><br/>
+                                <small> <b> Meaning </b> - <br/> {item.meaning}
                                 </small>
                             </p>
                         </div>

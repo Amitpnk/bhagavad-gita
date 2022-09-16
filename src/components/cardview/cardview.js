@@ -5,13 +5,16 @@ import data from "../bg-data.json";
 
 const CardView = () => {
 
-    const [item, setItems] = useState([])
+    const [items, setItems] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const { id } = useParams();
 
 
     useEffect(() => {
-        setItems(data.cards)
+        let d = data;
+       
+        setItems(d.cards.filter(x => x.id === +id)[0]);
+    
 
         // fetch('data/db.json')
         // .then((r) => r.json())
@@ -43,7 +46,7 @@ const CardView = () => {
                         <div className="row">
                             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="page-header" id="top">
-                                    <h2 className="pageheader-title text-center">{item.name}</h2>
+                                    <h2 className="pageheader-title text-center">{items.name}</h2>
                                 </div>
                             </div>
                         </div>
@@ -54,13 +57,13 @@ const CardView = () => {
                                 <h3 className="text-center"> &nbsp; </h3>
                             </div>
                             <div className="col-xl-6  col-sm-6  col-lg-6 col-md-6 col-6 text-center">
-                                <h3 className="text-center">{item.description}</h3>
+                                <h3 className="text-center">{items.description}</h3>
                             </div>
                             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                 <h3 className="text-center"> &nbsp; </h3>
                             </div>
                         </div>
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div className="page-header" id="top">
                                     <h3 className="pageheader-title text-center"> <u> Synonyms</u></h3>
@@ -72,12 +75,12 @@ const CardView = () => {
                                 <h3 className="text-center"> &nbsp; </h3>
                             </div>
                             <div className="col-xl-6  col-sm-6  col-lg-6 col-md-6 col-6 text-center">
-                                <h3 className="text-center">{item.synonmys}</h3>
+                                <h3 className="text-center">{items.synonmys}</h3>
                             </div>
                             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                 <h3 className="text-center"> &nbsp; </h3>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="row">
                             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -91,7 +94,7 @@ const CardView = () => {
                                 <h3 className="text-center"> &nbsp; </h3>
                             </div>
                             <div className="col-xl-6  col-sm-6  col-lg-6 col-md-6 col-6 text-center">
-                                <h3 className="text-center">{item.meaning}</h3>
+                                <h3 className="text-center">{items.meaning}</h3>
                             </div>
                             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                                 <h3 className="text-center"> &nbsp; </h3>
