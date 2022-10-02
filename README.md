@@ -8,3 +8,9 @@ This website will help you by selecting dropdown contains problem you are facing
 
 Open this [link](https://amitpnk.github.io/bhagavad-gita/#/)
 
+![image](./docs/image.png)
+
+Step 1: Select solution in dropdown
+
+Step 2: Move cursor on the card to get versus related to your problem
+
